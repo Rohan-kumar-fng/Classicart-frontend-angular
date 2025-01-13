@@ -19,6 +19,34 @@
                 <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12 role=alert">
                     No Products Found...
                 </div>
+
+                <!-- Adding PAgination componenot in html component -->
+                 <div class="footer-pagination">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- Leave the first half -->
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-9" style="padding-left: 30%;">
+                                    <ngb-pagination [(page)]="thePageNumber"
+                                    [pageSize]="thePageSize"
+                                    [collectionSize]="theTotalElements"
+                                    [maxSize]="5"
+                                    (pageChange)="handleListProduct()"
+                                    >
+                                    <!-- Here Maximum isze the maximum page option show in the screen -->
+
+                                    </ngb-pagination>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                 </div>
             </div>
         </div>
     </div>

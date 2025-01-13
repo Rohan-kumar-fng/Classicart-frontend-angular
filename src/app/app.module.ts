@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
 import { SearchComponent } from './components/search/search.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Here I am going to involve Router Module(v2.0)
 @NgModule({
@@ -20,9 +21,10 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     ProductDetailComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
